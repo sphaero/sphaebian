@@ -46,9 +46,6 @@ d-i apt-setup/contrib boolean true
 # sources.list line will be left commented out
 #d-i apt-setup/local0/key string http://local.server/key
 
-### Package selection
-tasksel tasksel/first multiselect
-
 # Individual additional packages to install
 d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp dbus
 # Whether to upgrade packages after debootstrap.
