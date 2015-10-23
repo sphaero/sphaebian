@@ -23,3 +23,23 @@ Or use the url shortener:
 
   install preseed/url=https://goo.gl/fzBNqt
 
+## Tweaks
+
+* some minor tweaks through preseeding the installer
+  * no root account creation
+  * pi user account creation (default pw)
+  * enable all debian repository sections
+  * add some essential packages (openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp dbus ca-certificates)
+  * set some debconf answers like locales
+  * issue a post install command
+  * remove quiet kernel boot
+* post install command:
+  * modify /etc/skel to have a color prompt
+  * add some groups
+  * configure ifplugd
+  * setup sudoers
+  * tweak inputrc (as done in Spindle)
+  * add */sbin to PATH env
+  * rename to Sphaebian
+
+

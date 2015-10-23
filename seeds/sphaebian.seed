@@ -3,9 +3,9 @@
 d-i debian-installer/locale string en_US
 d-i time/zone string Europe/Amsterdam
 
-### Network configuration
+### Network configuration (Won't work through PXE since there is no network yet)
 # set default hostname
-d-i netcfg/get_hostname string steamos
+d-i netcfg/get_hostname string sphaebian
 d-i netcfg/get_hostname seen false
 
 ### Account setup
