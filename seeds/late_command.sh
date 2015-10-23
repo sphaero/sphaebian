@@ -92,7 +92,7 @@ rename_sphaebian() {
     sudo sed -i /etc/os-release -e 's|NAME="Debian GNU/Linux"|NAME="Sphaebian GNU/Linux"|'
     . /etc/os-release
     sed /etc/os-release -i -e "s|PRETTY_NAME=\"Debian .*|PRETTY_NAME=\"$NAME $VERSION\"|"
-    echo "$NAME $VERSION_ID8 \n \l" > /etc/issue
+    echo -e "$NAME $VERSION_ID8 \\\n \\l" > /etc/issue
     echo "" >> /etc/issue
     echo "$NAME $VERSION_ID8" > /etc/issue.net
     echo "" >> /etc/issue.net

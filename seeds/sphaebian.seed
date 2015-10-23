@@ -48,7 +48,7 @@ d-i apt-setup/contrib boolean true
 #d-i apt-setup/local0/key string http://local.server/key
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp dbus
+d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp dbus ca-certificates
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
 d-i pkgsel/upgrade select full-upgrade
@@ -123,3 +123,6 @@ keyboard-configuration  keyboard-configuration/altgr    select  The default for 
 # Default locale for the system environment:
 # Choices: None, en_GB.UTF-8
 locales locales/default_environment_locale select   en_GB.UTF-8
+
+### some tweaks
+grub-pc grub2/linux_cmdline_default string  
