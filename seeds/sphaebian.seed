@@ -2,6 +2,8 @@
 # Preseeding only locale sets language, country and locale.
 d-i debian-installer/locale string en_US
 
+
+
 ### Network configuration
 # set default hostname
 d-i netcfg/get_hostname string steamos
@@ -67,9 +69,6 @@ x-ttcidfont-conf    x-ttcidfont-conf/tt_backend select  freetype
 # Character set to support:
 # Choices: . Arabic, # Armenian, # Cyrillic - KOI8-R and KOI8-U, # Cyrillic - non-Slavic languages, # Cyrillic - Slavic languages (also Bosnian and Serbian Latin), . Ethiopic, # Georgian, # Greek, # Hebrew, # Lao, # Latin1 and Latin5 - western Europe and Turkic languages, # Latin2 - central Europe and Romanian, # Latin3 and Latin8 - Chichewa; Esperanto; Irish; Maltese and Welsh, # Latin7 - Lithuanian; Latvian; Maori and Marshallese, . Latin - Vietnamese, # Thai, . Combined - Latin; Slavic Cyrillic; Hebrew; basic Arabic, . Combined - Latin; Slavic Cyrillic; Greek, . Combined - Latin; Slavic and non-Slavic Cyrillic
 console-setup   console-setup/codeset47 select  . Combined - Latin; Slavic Cyrillic; Greek
-# Time zone:
-# Choices: GMT, GMT+0, GMT+1, GMT+10, GMT+11, GMT+12, GMT+2, GMT+3, GMT+4, GMT+5, GMT+6, GMT+7, GMT+8, GMT+9, GMT-0, GMT-1, GMT-10, GMT-11, GMT-12, GMT-13, GMT-14, GMT-2, GMT-3, GMT-4, GMT-5, GMT-6, GMT-7, GMT-8, GMT-9, GMT0, Greenwich, UCT, UTC, Universal, Zulu
-tzdata  tzdata/Zones/Etc    select  UTC
 # for internal use
 console-setup   console-setup/store_defaults_in_debconf_db      boolean true
 # Font for the console:
