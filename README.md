@@ -15,13 +15,17 @@ My ultimate goal is to have a full busybox based root filesystem but with Debian
 
 ## Usage
 
-To install this run the debian installer using favourite method (CD, PXE, etc). The run the following command to boot the debian installer
+To install Sphaebian run the Debian installer using your favourite method (CD, PXE, etc). Then run the following command to boot the Debian installer
 
-  install preseed/url=https://raw.githubusercontent.com/sphaero/sphaebian/master/seeds/sphaebian.seed
+```
+install url=https://raw.githubusercontent.com/sphaero/sphaebian/master/seeds/sphaebian.seed
+```
 
 Or use the url shortener:
 
-  install preseed/url=https://goo.gl/fzBNqt
+```
+install url=https://goo.gl/fzBNqt
+```
 
 ## Tweaks
 
