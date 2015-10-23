@@ -1,8 +1,7 @@
 ### Localization
 # Preseeding only locale sets language, country and locale.
 d-i debian-installer/locale string en_US
-
-
+d-i time/zone string Europe/Amsterdam
 
 ### Network configuration
 # set default hostname
@@ -53,6 +52,7 @@ d-i pkgsel/include string openssh-server console-setup keyboard-configuration de
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
 d-i pkgsel/upgrade select full-upgrade
+popularity-contest popularity-contest/participate boolean false
 
 ### Run some tweaks
 d-i preseed/late_command string in-target wget -q https://github.com/sphaero/sphaebian/raw/master/seeds/late_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup; in-target /tmp/setup
