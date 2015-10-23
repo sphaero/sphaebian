@@ -1,3 +1,13 @@
+### Localization
+# Preseeding only locale sets language, country and locale.
+d-i debian-installer/locale string en_US
+
+### Network configuration
+# set default hostname
+d-i netcfg/get_hostname string steamos
+d-i netcfg/get_hostname seen false
+
+### Account setup
 # Skip creation of a root account (normal user account will be able to
 # use sudo). The default is false; preseed this to true if you want to set
 # a root password.
@@ -20,12 +30,11 @@ d-i passwd/user-password-crypted password $6$hY90MKlUdkkA/A12$ocjZ8WtDgpgIBAhL9o
 # You can choose to install non-free and contrib software.
 d-i apt-setup/non-free boolean true
 d-i apt-setup/contrib boolean true
-# Uncomment this if you don't want to use a network mirror.
-#d-i apt-setup/use_mirror boolean false
 # Select which update services to use; define the mirrors to be used.
 # Values shown below are the normal defaults.
 #d-i apt-setup/services-select multiselect security, updates
 #d-i apt-setup/security_host string security.debian.org
+#d-i apt-setup/volatile_host string volatile.debian.org
 # Additional repositories, local[0-9] available
 #d-i apt-setup/local0/repository string \
 #       http://local.server/debian stable main
@@ -37,18 +46,17 @@ d-i apt-setup/contrib boolean true
 # sources.list line will be left commented out
 #d-i apt-setup/local0/key string http://local.server/key
 
-
 ### Package selection
 tasksel tasksel/first multiselect
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp
+d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp dbus
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
 d-i pkgsel/upgrade select full-upgrade
 
 ### Run some tweaks
-d-i preseed/late_command string in-target wget -q https://github.com/sphaero/sphaebian/raw/master/late_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup; in-target /tmp/setup
+d-i preseed/late_command string in-target wget -q https://github.com/sphaero/sphaebian/raw/master/seeds/late_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup; in-target /tmp/setup
 
 ### FROM RASPBIAN SPINDLE
 # System's default wordlist:
