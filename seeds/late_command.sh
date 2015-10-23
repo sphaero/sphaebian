@@ -9,7 +9,7 @@
 set -ex
 
 modify_etc_skel() {
-  sed /etc/skel/.bashrc -i 's/force_color_prompt=no/force_color_prompt=yes/'
+  sed /etc/skel/.bashrc -i 's/#force_color_prompt=yes/force_color_prompt=yes/'
 }
 
 setup_automounting() {
