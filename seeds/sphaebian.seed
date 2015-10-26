@@ -48,7 +48,7 @@ d-i apt-setup/contrib boolean true
 #d-i apt-setup/local0/key string http://local.server/key
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp dbus ca-certificates
+d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ifplugd ntp dbus ca-certificates lsb-release
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
 d-i pkgsel/upgrade select full-upgrade
