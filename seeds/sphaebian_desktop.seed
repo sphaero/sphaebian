@@ -48,7 +48,7 @@ d-i apt-setup/contrib boolean true
 #d-i apt-setup/local0/key string http://local.server/key
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ntp dbus i3 xorg pasystray network-manager-gnome avahi-daemon arandr lxappearance cups cups-pdf libreoffice chromium iceweasel evince flashplugin-nonfree fonts-liberation geany gimp gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools inotify-tools unison pidgin pulseaudio pulseaudio-module-zeroconf pulseaudio-utils pavucontrol paprefs python3 transmission transmission-gtk ttf-mscorefonts-installer vlc xfonts-terminus libreoffice-gtk
+d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ntp dbus i3 xorg pasystray network-manager-gnome avahi-daemon arandr lxappearance cups cups-pdf libreoffice chromium iceweasel evince flashplugin-nonfree fonts-liberation geany gimp gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools inotify-tools unison pidgin pulseaudio pulseaudio-module-zeroconf pulseaudio-utils pavucontrol paprefs python3 transmission transmission-gtk ttf-mscorefonts-installer vlc xfonts-terminus libreoffice-gtk lxterminal
 # extra?  myspell-nl myspell-en-gb myspell-en-us hyphen-nl hyphen-en-gb mythes-en-us hyphen-en-us
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
