@@ -33,9 +33,12 @@ add_pi_user_to_groups() {
   done
 }
 
+# only for non-desktop?
 configure_ifplugd() {
-  sed /etc/default/ifplugd -i -e 's/^INTERFACES.*/INTERFACES="auto"/'
-  sed /etc/default/ifplugd -i -e 's/^HOTPLUG_INTERFACES.*/HOTPLUG_INTERFACES="all"/'
+  if [ -e /etc/default/ifplugd ]; then
+    sed /etc/default/ifplugd -i -e 's/^INTERFACES.*/INTERFACES="auto"/'
+    sed /etc/default/ifplugd -i -e 's/^HOTPLUG_INTERFACES.*/HOTPLUG_INTERFACES="all"/'
+  fi
 }
 
 setup_sudoers() {
