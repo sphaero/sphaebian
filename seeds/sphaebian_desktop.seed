@@ -56,7 +56,7 @@ d-i pkgsel/upgrade select full-upgrade
 popularity-contest popularity-contest/participate boolean false
 
 ### Run some tweaks
-d-i preseed/late_command string in-target wget -q https://github.com/sphaero/sphaebian/raw/master/seeds/late_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup; in-target /tmp/setup
+d-i preseed/late_command string in-target wget -q https://github.com/sphaero/sphaebian/raw/master/seeds/late_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup; in-target /tmp/setup; https://github.com/sphaero/sphaebian/raw/master/seeds/late_desktop_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup;  in-target /tmp/setup
 
 ### FROM RASPBIAN SPINDLE
 # System's default wordlist:
