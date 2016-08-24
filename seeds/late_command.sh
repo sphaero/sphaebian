@@ -25,6 +25,7 @@ EOF2
 
 add_pi_user_to_groups() {
   groupadd -f -r input
+  groupadd -f -r lpadmin
   groupadd -f -r spi
   groupadd -f -r i2c
   groupadd -f -r gpio
