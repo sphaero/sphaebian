@@ -28,7 +28,7 @@ add_pi_user_to_groups() {
   groupadd -f -r spi
   groupadd -f -r i2c
   groupadd -f -r gpio
-  for GRP in adm dialout cdrom audio users sudo video games plugdev input gpio spi i2c; do
+  for GRP in adm dialout cdrom audio users sudo video games plugdev input lpadmin gpio spi i2c; do
     adduser pi $GRP
   done
 }
