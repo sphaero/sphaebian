@@ -48,15 +48,15 @@ d-i apt-setup/contrib boolean true
 #d-i apt-setup/local0/key string http://local.server/key
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ntp dbus i3 xorg pasystray network-manager-gnome avahi-daemon arandr lxappearance cups cups-pdf libreoffice chromium iceweasel evince flashplugin-nonfree fonts-liberation geany gimp gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools inotify-tools unison pidgin pulseaudio pulseaudio-module-zeroconf pulseaudio-utils pavucontrol paprefs python3 transmission transmission-gtk ttf-mscorefonts-installer vlc xfonts-terminus libreoffice-gtk lxterminal
-# extra?  myspell-nl myspell-en-gb myspell-en-us hyphen-nl hyphen-en-gb mythes-en-us hyphen-en-us
+d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ntp dbus i3 i3lock xorg pasystray network-manager-gnome avahi-daemon arandr lxappearance lxterminal cups cups-pdf libreoffice chromium iceweasel evince flashplugin-nonfree fonts-liberation geany gimp gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools inotify-tools unison pidgin pulseaudio pulseaudio-module-zeroconf pulseaudio-utils pavucontrol paprefs python3 transmission transmission-gtk ttf-mscorefonts-installer vlc xfonts-terminus libreoffice-gtk lxterminal command-not-found
+# extra?  myspell-nl myspell-en-gb myspell-en-us hyphen-nl hyphen-en-gb mythes-en-us hyphen-en-us liquidprompt simple-scan suckless-tools thunar
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
 d-i pkgsel/upgrade select full-upgrade
 popularity-contest popularity-contest/participate boolean false
 
 ### Run some tweaks
-d-i preseed/late_command string in-target wget -q https://github.com/sphaero/sphaebian/raw/master/seeds/late_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup; in-target /tmp/setup; https://github.com/sphaero/sphaebian/raw/master/seeds/late_desktop_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup;  in-target /tmp/setup
+d-i preseed/late_command string in-target wget -q https://github.com/sphaero/sphaebian/raw/master/seeds/late_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup; in-target /tmp/setup; wget -q https://github.com/sphaero/sphaebian/raw/master/seeds/late_desktop_command.sh -O /tmp/setup; in-target chmod +x /tmp/setup;  in-target /tmp/setup
 
 ### FROM RASPBIAN SPINDLE
 # System's default wordlist:
