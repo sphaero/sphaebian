@@ -50,3 +50,5 @@ EOF
 }
 
 systemd_autologin
+#copy i3 config
+wget -q https://raw.githubusercontent.com/sphaero/sphaebian/master/config/i3/config -O /etc/i3/config

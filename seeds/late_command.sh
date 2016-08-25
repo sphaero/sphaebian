@@ -42,6 +42,7 @@ configure_ifplugd() {
   fi
 }
 
+#already handled by add_pi_user_to_groups
 setup_sudoers() {
   chmod +w /etc/sudoers
   echo "pi ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
@@ -106,7 +107,7 @@ modify_etc_skel
 #setup_automounting
 add_pi_user_to_groups
 configure_ifplugd
-setup_sudoers
+#setup_sudoers
 #setup_swap
 tweak_inputrc
 fiddle_default_PATH

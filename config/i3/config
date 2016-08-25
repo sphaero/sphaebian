@@ -182,12 +182,23 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # touchpad tweaks
-exec synclient PalmDetect=1 # enable palm detect 
-exec synclient TapButton1=0
-exec synclient TapButton2=0
-exec synclient TapButton3=0
+#exec synclient PalmDetect=1 # enable palm detect 
+#exec synclient TapButton1=0
+#exec synclient TapButton2=0
+#exec synclient TapButton3=0
 
 exec dunst --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
+
+#######################################################################
+# automatically start i3-config-wizard to offer the user to create a
+# keysym-based config which used their favorite modifier (alt or windows)
+#
+# i3-config-wizard will not launch if there already is a config file
+# in ~/.i3/config.
+#
+# Please remove the following exec line:
+#######################################################################
+exec i3-config-wizard
 
