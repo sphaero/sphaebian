@@ -20,13 +20,13 @@ ExecStart=/sbin/agetty --autologin pi --noclear tty8 38400
 WantedBy=multi-user.target
 EOF
   systemctl enable x11-login.service
-  if grep -q "/dev/tty8" /etc/bash.bashrc; then
+  if grep -q "/dev/tty6" /etc/bash.bashrc; then
      # return so we don't add to bashrc
      return
   fi
   # add to bashrc
   cat <<"EOF" >> /etc/bash.bashrc
-if [[ ! ${DISPLAY} && `tty` == "/dev/tty8" ]]; then
+if [[ ! ${DISPLAY} && `tty` == "/dev/tty6" ]]; then
     exec startx
 fi
 EOF
