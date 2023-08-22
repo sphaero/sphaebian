@@ -54,7 +54,7 @@ d-i mirror/suite string testing
 #d-i mirror/udeb/suite string testing
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ntp dbus i3 i3lock xorg network-manager-gnome avahi-daemon arandr lxappearance lxterminal cups libreoffice chromium firefox-esr fonts-liberation xfonts-terminus ttf-mscorefonts-installer gimp gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools inotify-tools pipewire-audio pavucontrol python3 ttf-mscorefonts-installer vlc libreoffice-gtk3 command-not-found fonts-font-awesome liquidprompt pcmanfm suckless-tools
+d-i pkgsel/include string openssh-server console-setup keyboard-configuration debconf-utils less ntp dbus i3 i3lock xorg network-manager-gnome avahi-daemon arandr lxappearance lxterminal cups libreoffice chromium firefox-esr fonts-liberation xfonts-terminus ttf-mscorefonts-installer gimp gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools inotify-tools pipewire-audio pavucontrol python3 ttf-mscorefonts-installer vlc libreoffice-gtk3 command-not-found fonts-font-awesome liquidprompt pcmanfm suckless-tools materia-gtk-theme mesa-utils pasystray
 # extra?  hunspell-nl hunspell-en-gb hunspell-en-us hyphen-nl hyphen-en-gb mythes-en-us hyphen-en-us liquidprompt simple-scan suckless-tools thunar
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
