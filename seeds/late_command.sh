@@ -103,13 +103,13 @@ rename_sphaebian() {
     echo "" >> /etc/issue.net
 }
 
-modify_etc_skel
+#modify_etc_skel
 #setup_automounting
-add_pi_user_to_groups
-configure_ifplugd
+#add_pi_user_to_groups
+#configure_ifplugd
 #setup_sudoers
 #setup_swap
 tweak_inputrc
-fiddle_default_PATH
+#fiddle_default_PATH
 #configure_sound
-rename_sphaebian
+#rename_sphaebian
